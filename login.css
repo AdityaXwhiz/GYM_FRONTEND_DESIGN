@@ -1,0 +1,341 @@
+/* Base and theme (5-color palette) */
+:root {
+  --bg: #0b0b0f; /* background black */
+  --fg: #ffffff; /* foreground white */
+  --muted: #9ca3af; /* gray */
+  --primary: #22c55e; /* green */
+  --accent: #f59e0b; /* amber */
+}
+#name_gym{
+  position: absolute;
+  left:100px;
+  font-size:80px;
+  top:400px;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  
+}
+#fire {
+    background: linear-gradient(45deg, #ff0000, #ff6600, #ffaa00) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  color: var(--fg);
+  background: var(--bg) center / cover fixed url("bg.jpeg");
+  /* dark overlay for readability */
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout shells */
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Cards */
+.card {
+  background: rgba(0, 0, 0, 0.6); /* translucent dark layer */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Form card sizing */
+.form-card {
+  width: min(560px, 92vw);
+  min-height: 800px; /* requested height */
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  
+}
+
+/* Promo card sizing (image + text) */
+.promo-card {
+  width: 500px;
+  height: 500px; /* requested */
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+  background: #111 center / cover no-repeat url("wmremove-transformed.jpeg");
+}
+.promo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.75) 100%);
+}
+.promo-content {
+  position: relative;
+  padding: 24px 24px 28px;
+}
+.promo-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.promo-title {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-wrap: balance;
+}
+.promo-text {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Form styling */
+.form-header {
+  margin-bottom: 18px;
+}
+.form-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 6px 0;
+}
+.form-subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  display: block;
+}
+.input,
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: var(--fg);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.input::placeholder {
+  color: #cbd5e170;
+}
+.input:focus,
+.select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: transform .08s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #001a08;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.28);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--fg);
+}
+
+.helper {
+  font-size: 14px;
+  color: var(--muted);
+}
+.helper a {
+  color: var(--accent);
+}
+
+/* Login overlap layout */
+.overlap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.overlap .promo-card {
+  flex: 0 0 500px;
+}
+.overlap .form-card {
+  flex: 0 0 min(560px, 92vw);
+  min-height: 640px;
+  margin-left: -80px; /* slight overlap */
+  position: relative;
+  z-index: 2;
+}
+
+/* Badges/brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--muted);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp .65s ease .05s forwards;
+}
+.fade-up.delay {
+  animation-delay: .18s;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stack {
+    gap: 24px;
+  }
+}
+@media (max-width: 1024px) {
+  .stack {
+    flex-direction: column;
+  }
+  .promo-card {
+    width: min(560px, 92vw);
+    height: 380px; /* reasonable for smaller screens */
+  }
+  .form-card {
+    min-height: auto;
+  }
+  .overlap {
+    flex-direction: column;
+  }
+  .overlap .form-card {
+    margin-left: 0; /* remove overlap on mobile */
+  }
+}
+/* Apply fire borders to both cards */
+.form-card, .promo-card {
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(135deg, #ff0000, #ff6600, #ffaa00) 1;
+  
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    3px 0 8px rgba(255, 68, 68, 0.5),
+    0 3px 8px rgba(255, 136, 0, 0.4);
+}
+
+/* Keep existing individual card styles */
+.form-card {
+  width: min(560px, 92vw);
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.promo-card {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+  background: #111 center / cover no-repeat url("wmremove-transformed.jpeg");
+  
+}

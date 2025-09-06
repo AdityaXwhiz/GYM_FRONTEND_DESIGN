@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signup.css">
+  <title>Signup</title>
+</head>
+<body>
+  <main class="auth-wrapper">
+     <div class="gym_name">
+          <h1 id="name_gym">HELL<span id="fire">FIRE</span><br>GYM</h1>
+        </div>  
+        
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card auth-card" id="authCard" role="region" aria-label="Signup form">
+            <div class="row g-0 align-items-center">
+              <!-- Left: Form -->
+              <div class="col-12 col-lg-6 left left-tall">
+                <section class="signup-card" role="region" aria-label="Signup form">
+                  <header class="signup-card-header">
+                    <h1 class="brand h3 fw-bold mb-2">Create your account</h1>
+                    <p class="small-note mb-0">Unlock training plans, PR streaks, and more.</p>
+                  </header>
+
+                  <form class="signup-card-body needs-validation" novalidate id="signupForm">
+                    <div class="row">
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control focus-ring" id="firstName" required />
+                        <div class="invalid-feedback">Please enter your first name.</div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control focus-ring" id="lastName" required />
+                        <div class="invalid-feedback">Please enter your last name.</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control focus-ring" id="email" placeholder="you@example.com" required />
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="password" class="form-label d-flex align-items-center justify-content-between">
+                        <span>Password</span>
+                        <small id="passHint" class="text-muted">At least 8 chars</small>
+                      </label>
+                      <input type="password" class="form-control focus-ring" id="password" minlength="8" required />
+                      <div class="meter mt-2" id="meter" aria-hidden="true"><span></span></div>
+                      <div class="invalid-feedback">Please enter a stronger password (min 8 chars).</div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="confirm" class="form-label">Confirm password</label>
+                      <input type="password" class="form-control focus-ring" id="confirm" required />
+                      <div class="invalid-feedback">Passwords must match.</div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" value="" id="terms" required />
+                      <label class="form-check-label" for="terms">
+                        I agree to the terms and privacy policy
+                      </label>
+                      <div class="invalid-feedback">You must agree before continuing.</div>
+                    </div>
+
+                    <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2" type="submit" id="signupBtn">
+                      <span>Create account</span>
+                      <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="signupSpinner"></span>
+                    </button>
+
+                    <div class="divider"></div>
+                    <p class="mb-0 small text-center">
+                      Already have an account?
+                      <a class="link-accent" href="./login.html">Log in</a>
+                    </p>
+
+                    <div class="sr-only" aria-live="polite" id="signupStatus"></div>
+                  </form>
+                </section>
+              </div>
+
+              <!-- Right: Promo image card -->
+              <div class="col-12 col-lg-6 right promo">
+                <div class="promo-wrap">
+                  <div class="promo-card">
+                    <div class="promo-content">
+                      <span class="promo-eyebrow">SIGNUP FITNESS</span>
+                      <h2 class="promo-title">Build your strongest self</h2>
+                      <p class="promo-text">Coaching, plans, and community for real progress.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
