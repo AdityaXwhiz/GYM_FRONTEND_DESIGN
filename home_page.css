@@ -9,16 +9,48 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 header .logo {
   font-size: 28px;
   font-weight: 800;
-  color: var(--primary);
+  color: azure;
 }
-header .accent { color: var(--accent); }
+header .accent { font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* Gradient for fire colors */
+  background: linear-gradient(
+    -45deg,
+    #ff0000,
+    #ff6600,
+    #ff9900,
+    #ffcc00,
+    #ff6600,
+    #ff0000
+  );
+  background-size: 400% 400%;   /* make gradient bigger for animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation effect */
+  animation: fire 4s ease infinite;
+}
+
+/* Keyframes for moving gradient */
+@keyframes fire {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }}
 header nav a {
   margin-left: 24px;
   color: var(--fg);
