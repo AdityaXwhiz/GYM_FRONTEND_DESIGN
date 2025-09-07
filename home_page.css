@@ -144,3 +144,30 @@ footer {
   font-size: 14px;
   margin-top: 80px;
 }
+/* Normal nav links */
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* Icons inside nav */
+nav a i {
+  margin-right: 8px;
+  color: orange; /* default color */
+  transition: 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #ff6600; /* text changes to fire-orange */
+}
+
+nav a:hover i {
+  /* color: #ff0000; icon turns red */
+  text-shadow: 0 0 8px #ff6600, 0 0 16px #ff3300; /* glowing fire effect */
+}
