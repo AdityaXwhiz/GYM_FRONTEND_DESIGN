@@ -50,7 +50,7 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg
 .right{flex:0 0 500px;display:flex;align-items:center;justify-content:center;padding:0}
 .promo-wrap{display:flex;align-items:center;justify-content:center}
 .promo-card{width:500px;height:500px;position:relative;display:flex;align-items:flex-end;justify-content:flex-start;color:#fff;background:#111 center/cover no-repeat url("signup.jpeg");overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
-#name_gym{position:absolute;left:50px;font-size:80px;top:400px;text-align:center;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+#name_gym{position:absolute;left:150px;font-size:80px;top:300px;text-align:center;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
 #fire{background:linear-gradient(45deg,#ff0000,#ff6600,#ffaa00)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}
 .promo-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.55) 70%,rgba(0,0,0,0.75) 100%)}
 .promo-content{position:relative;padding:24px 24px 28px;z-index:1}
@@ -79,3 +79,9 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg
 @media(max-width:991.98px){.col-lg-6{width:100%}.col-lg-10{width:100%}.auth-card{flex-direction:column;min-height:auto;gap:32px}.left{flex:none;margin-left:0;width:100%;max-width:560px}.right{flex:none;width:100%;max-width:500px}.signup-card{min-height:auto}.signup-card-header,.signup-card-body{padding-left:32px;padding-right:32px}.promo-card{width:100%;height:380px}.col-md-6{width:100%;padding-right:0;padding-left:0}.col-md-6:last-child{padding-left:0}.signup-heading{position:static;transform:none;margin-bottom:32px;font-size:40px}}
 @media(max-width:768px){.auth-wrapper{padding:16px}.signup-card-header,.signup-card-body{padding-left:24px;padding-right:24px}.brand{font-size:28px}.promo-title{font-size:24px}.signup-heading{font-size:32px}}
 .signup-card,.promo-card{border-right:3px solid;border-bottom:3px solid;border-image:linear-gradient(135deg,#ff0000,#ff6600,#ffaa00) 1;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.6),3px 0 8px rgba(255,68,68,0.5),0 3px 8px rgba(255,136,0,0.4)}
+#name_gym1{position:absolute;left:150px;font-size:80px;top:300px;text-align:center;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+ .container1 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: 150px; /* shifts container towards right */
+}
