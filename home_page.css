@@ -16,7 +16,9 @@ header {
 header .logo {
   font-size: 28px;
   font-weight: 800;
-  color: var(--primary);
+  color:white;
+  border: 1.5px solid var(--primary);
+  
 }
 header .accent { color: var(--accent); }
 header nav a {
