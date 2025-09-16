@@ -348,3 +348,52 @@ body {
 .social-links a { width: 40px; height: 40px; background: rgba(255, 87, 34, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ff5722; text-decoration: none; transition: all 0.3s ease; }
 .social-links a:hover { background: #ff5722; color: white; transform: translateY(-2px); }
 .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 87, 34, 0.2); color: #cccccc; }
+/* In profile.css */
+
+/* 1. Prepare the Profile Avatar */
+.profile-avatar {
+    position: relative; /* This is needed to position the border around it */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #1a1a1a; /* A dark border to create separation */
+    margin: 0 auto 1.5rem;
+    background: url('profile.webp') no-repeat center/cover;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
+}
+
+/* 2. Create the moving gradient border using a pseudo-element */
+.profile-avatar::before {
+    content: '';
+    position: absolute;
+    /* Make it slightly larger than the avatar */
+    top: -6px; 
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 50%;
+    /* The "fire" gradient that sweeps around the circle */
+    background: conic-gradient(
+        #ffeb3b, 
+        #ff9800, 
+        #ff5722, 
+        #ff0000, 
+        #ff5722, 
+        #ff9800, 
+        #ffeb3b
+    );
+    z-index: -1; /* Place it behind the avatar image */
+    
+    /* 3. Apply the spinning animation */
+    animation: spin 4s linear infinite;
+}
+
+/* The keyframes that define the rotation animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
