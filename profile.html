@@ -3,9 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Profile - HELLFIRE GYM</title>
+    
+    <link rel="stylesheet" href="profile.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="brand-text">HELLFIRE</h1>
+                <span class="brand-subtitle">GYM</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home_page.html" class="nav-link">Home</a></li>
+                <li><a href="home_page.html#workouts" class="nav-link">Workouts</a></li>
+                <li><a href="home_page.html#tools" class="nav-link">Tools</a></li>
+                <li><a href="home_page.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="signup.html" class="nav-link">SignUp</a></li>
+                <li><a href="login.html" class="nav-link">LogIn</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+                <div class="profile_pic"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <header class="page-header container">
+            <h1>Your Fitness <span class="fire-text">Dashboard</span></h1>
+            <p>Track your progress, view your stats, and crush your goals.</p>
+        </header>
+
+        <div class="profile-layout container">
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar"></div>
+                    <h2 class="profile-name">Aditya Singh</h2>
+                    <span class="membership-badge">GOLD MEMBER</span>
+                    <div class="profile-info">
+                        <p><i class="fas fa-calendar-alt"></i> Joined: Sep 1, 2024</p>
+                        <p><i class="fas fa-user-shield"></i> Coach: Alex 'The Titan' Mercer</p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary"><i class="fas fa-edit"></i> Edit Profile</button>
+                        <button class="btn btn-outline"><i class="fas fa-credit-card"></i> Manage Subscription</button>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="profile-main">
+                <div class="content-card">
+                    <h2><i class="fas fa-chart-line"></i> Current Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">75 <small>kg</small></div>
+                            <div class="stat-label">Weight</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">18.5 <small>%</small></div>
+                            <div class="stat-label">Body Fat</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">22.1</div>
+                            <div class="stat-label">BMI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h2><i class="fas fa-trophy"></i> Personal Records</h2>
+                    <div class="list-grid">
+                        <div class="record-list">
+                            <ul>
+                                <li><span class="record-name">Bench Press</span> <span class="record-weight">100 kg</span></li>
+                                <li><span class="record-name">Squat</span> <span class="record-weight">140 kg</span></li>
+                                <li><span class="record-name">Deadlift</span> <span class="record-weight">180 kg</span></li>
+                            </ul>
+                        </div>
+                        <div class="goal-list">
+                            <ul>
+                                <li><span class="goal-text">Run 5k</span> <span class="goal-status">In Progress</span></li>
+                                <li><span class="goal-text">Gain 2kg Muscle</span> <span class="goal-status">In Progress</span></li>
+                                <li><span class="goal-text">Bench 110kg</span> <span class="goal-status">Next Up</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <p class="activity-text">Completed 'Push Day' workout.</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <p class="activity-text">Set a new Personal Record on Squat: <strong>140 kg</strong>!</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <p class="activity-text">Checked in at HELLFIRE GYM.</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                         <div class="activity-item">
+                            <p class="activity-text">Completed 'Leg Day' workout.</p>
+                            <span class="activity-time">5 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand"><h3 class="fire-text">HELLFIRE GYM</h3><p>Forge your strength, ignite your passion.</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="home_page.html">Home</a></li><li><a href="home_page.html#workouts">Workouts</a></li><li><a href="home_page.html#tools">Tools</a></li><li><a href="home_page.html#contact">Contact</a></li></ul></div>
+                <div class="footer-social"><h4>Follow Us</h4><div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 HELLFIRE GYM. All rights reserved.</p></div>
+        </div>
+    </footer>
+
 </body>
 </html>
